@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+// import { Button } from 'antd';
 import styles from './login.module.sass'
 import {
   useNavigate,
@@ -62,8 +63,9 @@ export default function Login() {
         <input onChange={adminChange} value={data.admin} type="text" />
         <input onChange={passwordChange} value={data.password} type="text" />
         <button onClick={loginClick} >事件加一</button>
-        <Link to="/Index">登陆
+        <Link to="/Index/home">登陆
         </Link>
+        {/* <Button type="primary">Button</Button> */}
       </div>
     </div>
   )
