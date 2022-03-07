@@ -5,7 +5,7 @@
 export const sendAction = () => {
   return {
     type: "SEND_TYPE",
-    value: ''
+    value: '123'
   }
 }
 

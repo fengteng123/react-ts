@@ -12,9 +12,12 @@ import Index from './view/index/index';
 import Login from './view/login/login';
 import Home from './view/home/Home'
 import My from './view/my/my'
+import store from './store';
+import { Provider } from 'react-redux';
 function App() {
   return (
-    <div style={{ width: '100%', height: '100vh' }}>
+    <Provider store={store}>
+      <div style={{ width: '100%', height: '100vh' }}>
       <BrowserRouter>
 
         <Routes>
@@ -32,6 +35,9 @@ function App() {
       </BrowserRouter>
     </div>
 
+    </Provider>
+
+    
   );
 }
 
