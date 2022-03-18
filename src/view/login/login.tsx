@@ -68,6 +68,24 @@ export default function Login() {
     console.log('进入页面');
 
     // console.log(navigate);
+    function a() {
+
+    }
+    console.log(a.prototype);
+
+    let abc:any = [];
+
+    console.log(abc.__proto__); // Array.prototype
+    console.log(abc.__proto__.__proto__); // object.prototype
+
+    let date = new Date();
+    let obj = new Object()
+
+    console.log(date instanceof Object);
+    console.log(obj instanceof Object);
+
+    
+    
 
     store.subscribe(()=>{
       console.log(store.getState());

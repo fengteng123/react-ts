@@ -12,7 +12,8 @@ import Index from './view/index/index';
 import Login from './view/login/login';
 import Home from './view/home/Home'
 import My from './view/my/my'
-import store from './store';
+// import store from './store';
+import store from './newStore/index'
 import { Provider } from 'react-redux';
 function App() {
   return (
