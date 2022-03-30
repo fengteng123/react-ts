@@ -12,8 +12,10 @@ function Home(porps:any) {
   const testReactRedux = () =>{
     // console.log(123);
     console.log(porps);
+
+    let count = porps.count + 1
     
-    porps.sendAction(123)
+    porps.sendAction(count)
     
   }
 
@@ -41,7 +43,7 @@ const dispatchToProps = (dispatch:Dispatch) =>{
       // 利用dispatch发送一个action
       // 传递action 对象我们要定义一个type属性
       dispatch({
-        type:'add_action',
+        type:'add_count',
         value
       })
       
@@ -50,6 +52,11 @@ const dispatchToProps = (dispatch:Dispatch) =>{
 
 }
 
-const connectHome = connect(null, dispatchToProps)(Home)
+const mapStateToProps = (state:any) =>{
+  return state
+  
+}
+
+const connectHome = connect(mapStateToProps, dispatchToProps)(Home)
 
 export default connectHome
