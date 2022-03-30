@@ -5,23 +5,18 @@
  */
 
 const initState = {
-  count:1,
+  count:0,
 }
 
 export const reducer = (state = initState, action:{type:String | number,[key: string]:any}) =>{
-  console.log(action);
-  console.log(state);
 
   switch (action.type) {
     case 'add_count':
       state.count = action.value
-      return  {...state}
-
+      return {...state}
+  
     default:
+      alert(123)
       return state;
   }
-  
-  
-  return state
-
  }

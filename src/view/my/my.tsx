@@ -2,11 +2,11 @@ import React from 'react'
 
 import { connect } from 'react-redux'
 
-function my(porps:any) {
+function my(props:any) {
   return (
     <div>
       <div> 我的页面</div>
-      <div>redux的数据{porps.count}</div>
+      <div>redux的数据{props.count}</div>
     </div>
   )
 }
@@ -14,7 +14,7 @@ function my(porps:any) {
 
 
 const mapStateToProps = (state:any) =>{
-  console.log("my", state);
+  // console.log("my", state);
   return state
   
 }
